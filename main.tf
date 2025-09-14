@@ -2,7 +2,7 @@ resource "aws_instance" "jenkins" {
     ami = local.ami_id
     instance_type = "t3.small"
     vpc_security_group_ids = [aws_security_group.main.id]
-    subnet_id = "subnet-03ec0639ef788fea2"
+    subnet_id = "subnet-04aef75a57db9144d"
     root_block_device {
         volume_size = 50
         volume_type = "gp3" # or "gp2", depending on your preference
@@ -21,7 +21,7 @@ resource "aws_instance" "jenkins-agent" {
     ami = local.ami_id
     instance_type = "t3.small"
     vpc_security_group_ids = [aws_security_group.main.id]
-    subnet_id = "subnet-03ec0639ef788fea2"
+    subnet_id = "subnet-04aef75a57db9144d"
     root_block_device {
         volume_size = 50
         volume_type = "gp3" # or "gp2", depending on your preference
